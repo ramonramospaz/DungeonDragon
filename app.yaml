@@ -1,0 +1,50 @@
+application: ramontarea1web
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html 
+
+- url: /js
+  static_dir: js
+
+- url: /estilos
+  static_dir: estilos
+
+- url: /Imagenes
+  static_dir: Imagenes
+  
+- url: /jspdf
+  static_dir: jspdf
+  
+- url: /sonidos
+  static_dir: sonidos
+
+- url: /rutinas.js
+  static_files: static/js/rutinas.js
+  upload: static/js/rutinas.js
+
+- url: /estilos.css
+  static_files: static/estilos/estilo.css
+  upload: static/estilos/estilo.css
+
+- url: /(.*\.(gif|png|jpg))
+  static_files: static/Imagenes/\1
+  upload: static/Imagenes/(.*\.(gif|png|jpg))
+
+- url: /jspdf.js
+  static_files: static/jspdf/jspdf.js
+  upload: static/jspdf/jspdf.js
+ 
+- url: /jspdf.plugin.addimage.js
+  static_files: static/jspdf/jspdf.plugin.addimage.js
+  upload: static/jspdf/jspdf.plugin.addimage.js
+  
+- url: /(.*\.ogg)
+  static_files: static/sonidos/\1
+  upload: static/sonidos/(.*\.ogg)
+

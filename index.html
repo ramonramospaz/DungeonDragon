@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Generador de Personajes de D&D</title>
+<meta name="generator" content="Bluefish 2.2.3" >
+<meta name="author" content="ramon" >
+<meta name="date" content="2013-04-04T23:21:18-0430" >
+<meta name="copyright" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+<link href="estilos/estilo.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/rutinas.js"></script>
+<script type="text/javascript" src="jspdf/jspdf.js"></script>
+<script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
+<audio>
+  <source src="sonidos/Save_Point.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+</head>
+<body onload="iniciar()">
+<img src="Imagenes/DyD.png" width="594" height="272" alt="" class="logo" onclick="reiniciar()"><br>
+<div id="s1" align="center">
+	<section>
+	Bienvenido al sistema de generación de personajes de calabozos y dragones. Para empezar presione el siguiente botón
+	</section>
+	<p class="boton" onclick="siguiente('s1')" >
+		Siguiente
+	</p>
+</div>
+<div id="s2" align="center">
+   <section>Para empezar ingrese el nombre del personaje y el sexo.</section>
+	<form>
+	<table>
+	<tr>
+	<td>Nombre:</td>
+	<td><input type="text" id="Nombre"></td>
+	</tr>
+	<tr>
+	<td>Sexo:</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td>Masculino</td>
+	<td><input type="radio" value="Masculino" checked="true" name="sexo" id="Sexo"></td>
+	</tr>
+	<tr>
+	<td>Femenino</td>
+	<td><input type="radio" value="Femenino" name="sexo" id="Sexo"></td>
+	</tr>
+	</table>
+	</form>
+	<p class="boton" onclick="siguiente('s2')" >
+		Siguiente
+	</p>
+</div>
+<div id="s3" align="center">
+	<section>Seleccione la raza:</section>
+	<script type="text/javascript" >
+		show_raza();
+	</script>
+	<input id="raza_seleccionada" type="hidden">
+	<p class="texto" id="miraza"></p>
+	<p class="boton" onclick="siguiente('s3')" >
+		Siguiente
+	</p>
+</div>
+<div id="s4" align="center">
+	<section>Generar puntaje de habilidades:</section>
+	<table>
+	<tr>
+	<td>Habilidades</td>
+	<td>Valor</td>
+	</tr>
+	<tr>
+	<td>Fuerza</td>
+	<td><input type="text" id="Fuerza" DISABLED></td>
+	</tr>
+	<tr>
+	<td>Destreza</td>
+	<td><input type="text" id="Destreza" DISABLED></td>
+	</tr>
+	<tr>
+	<td>Constitución</td>
+	<td><input type="text" id="Constitucion" DISABLED></td>
+	</tr>
+	<tr>
+	<td>Inteligencia</td>
+	<td><input type="text" id="Inteligencia" DISABLED></td>
+	</tr>
+	<tr>
+	<td>Sabiduría</td>
+	<td><input type="text" id="Sabiduria" DISABLED></td>
+	</tr>
+	<tr>
+	<td>Carisma</td>
+	<td><input type="text" id="Carisma" DISABLED></td>
+	</tr>
+	</table>
+	<p class="boton" onclick="estatus_aleatorios()">
+		Random
+	</p>
+	<p class="boton" onclick="siguiente('s4')" >
+		Siguiente
+	</p>
+</div>
+<div id="s5" align="center">
+	<section>Seleccione la clase:</section>
+	<script type="text/javascript" >		
+		show_trabajo();
+	</script>
+	<input id="trabajo_seleccionado" type="hidden">
+	<p class="texto" id="miclase"></p>
+	<p class="boton" onclick="siguiente('s5')" >
+		Siguiente
+	</p>
+</div>
+<div id="s6" align="center">
+	<section>Hoja Generada:</section>
+</div>
+<footer align="center">
+2013 © Ramón Ramos. Todos los derechos reservados.<br>
+Las imagenes usadas pertenece a wizard.com.<br>
+Esta pagina es meramente educativa.
+</footer>
+</body>
+</html>

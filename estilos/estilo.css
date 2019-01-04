@@ -1,0 +1,99 @@
+img.logo{
+	display: block;  
+   margin-left: auto;  
+   margin-right: auto;	
+ 	
+}
+
+body {
+	background-color: black;
+	background-image: url('/Imagenes/Dungeon.jpg');
+	#background-image: url('Dungeon.jpg');
+	background-repeat:no-repeat;
+	background-position: center top;
+	background-attachment: scroll;
+	background-size: 100%;
+}
+
+div {
+	 
+	 font-family: 'Gabriela', serif;
+	 padding:6px 38px;
+	 margin-left:auto;
+	 margin-right:auto;
+	 border-radius:10px;
+	 width: 800px;
+	 color: white;
+	 -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+}
+
+footer {
+	color: white;
+	font-family: 'Gabriela', serif;
+	position: fixed;
+	top: 90%;	
+	left: 50%;
+	margin-left: -200px;
+}
+
+div{
+	opacity: 0;
+	display:none;
+}
+
+div.vi {
+  opacity: 1;
+  display:block;
+}
+
+div.hi { 
+  opacity: 0;
+  display:none;
+}
+
+p.texto {
+	font-family: 'Gabriela', serif;
+	background-color : black;
+	border: 1px solid brown;
+	width: 230px;
+	height: 22px;
+}
+
+p.boton {
+	font-family: 'Gabriela', serif;
+	padding:6px 38px;
+	color: white;
+	width: 80px;
+	height: 21px;
+	box-shadow: 10px 10px 5px #888888;
+	background-image:url('/Imagenes/Boton2.png');
+	#background-image:url('Boton2.png');
+}
+
+p.boton:hover {
+	color: gray;
+	cursor:pointer;
+}
+
+p.boton:active {
+	position:relative;
+	top:1px;
+}
+
+img:hover {
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  opacity: .8;
+	
+}
+
+img:active{
+	position:relative;
+	top:1px;
+}
+
+section{
+	margin: 10px;
+}
